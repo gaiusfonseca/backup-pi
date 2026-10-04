@@ -29,7 +29,7 @@ def is_txt_extension(path):
     return basename.lower().endswith(".txt")
 
 def get_file_contents(path):
-    file = open(path, 'r')
-    return [line.rstrip('\n') for line in file.readlines()]
+    with open(path, 'r', encoding="utf-8")as file:
+        return [line.rstrip('\n') for line in file]
 
     
