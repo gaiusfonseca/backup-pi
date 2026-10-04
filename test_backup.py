@@ -33,3 +33,13 @@ def test_should_return_false_when_many_argument():
     # Assert
     assert actual == expected, "expected False when there are no arguments."
 
+def test_should_return_false_when_path_exists():
+    # Arrange
+    non_existing_folder = os.path.join(".", "non_existing_folder")
+    expected = False
+
+    # Act
+    actual = backup.path_exists(non_existing_folder)
+
+    # Assert
+    assert actual == expected, "expected False when non existing folder path was given."
