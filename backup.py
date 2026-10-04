@@ -27,4 +27,9 @@ def is_file(path):
 def is_txt_extension(path):
     basename = str(os.path.basename(path))
     return basename.lower().endswith(".txt")
+
+def get_file_contents(path):
+    file = open(path, 'r')
+    return [line.rstrip('\n') for line in file.readlines()]
+
     
