@@ -43,3 +43,14 @@ def test_should_return_false_when_path_exists():
 
     # Assert
     assert actual == expected, "expected False when non existing folder path was given."
+
+def test_should_return_true_when_path_exists():
+    # Arrange
+    non_existing_folder = os.path.join(".", "folders_to_backup.txt")
+    expected = True
+
+    # Act
+    actual = backup.path_exists(non_existing_folder)
+
+    # Assert
+    assert actual == expected, "expected True when existing folder path was given."
