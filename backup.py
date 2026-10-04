@@ -2,7 +2,7 @@
 # usage: ./backup.py path
 # path is the path to a text file (.txt) containing the absolute path to all folders you want to backup
 
-import logging, os
+import logging, os, sys, zipfile
 
 logging.basicConfig(level=logging.DEBUG, format="%(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
