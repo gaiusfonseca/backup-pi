@@ -65,3 +65,14 @@ def test_should_return_false_when_is_not_a_file():
 
     # Assert
     assert actual == expected, "expected False when path is not a file."
+
+def test_should_return_true_when_is_file():
+    # Arrange
+    path = os.path.join(".", "folders_to_backup.txt")
+    expected = True
+
+    # Act
+    actual = backup.is_file(path)
+
+    # Assert
+    assert actual == expected, "expected True when path is a file."
