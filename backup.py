@@ -24,4 +24,7 @@ def is_file(path):
     return os.path.isfile(path)
 
 # verifies if the extension is .txt
-
+def is_txt_extension(path):
+    basename = str(os.path.basename(path))
+    return basename.lower().endswith(".txt")
+    
