@@ -1,0 +1,2 @@
+/home/gaius/Documentos/Livros/Python
+/home/gaius/Documentos/Estudos/LinuxEssentialsCertification
