@@ -76,3 +76,14 @@ def test_should_return_true_when_is_file():
 
     # Assert
     assert actual == expected, "expected True when path is a file."
+
+def test_should_return_false_when_not_a_txt_extension():
+    # Arrange
+    path = os.path.join(".", "backup.py")
+    expected = False
+
+    # Act
+    actual = backup.is_txt_extension(path)
+
+    # Assert
+    assert actual == expected, "expected False when file has not a .txt extension"
