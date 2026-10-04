@@ -5,6 +5,7 @@
 
 logging.basicConfig(level=logging.DEBUG, format="%(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
+# logger.disable(logging.CRITICAL)
 
 # verifies if an argument was passed
 def has_argument(argument):
