@@ -54,3 +54,14 @@ def test_should_return_true_when_path_exists():
 
     # Assert
     assert actual == expected, "expected True when existing folder path was given."
+
+def test_should_return_false_when_is_not_a_file():
+    # Arrange
+    path = os.path.join(".", "imaginary_folder")
+    expected = False
+
+    # Act
+    actual = backup.is_file(path)
+
+    # Assert
+    assert actual == expected, "expected False when path is not a file."
