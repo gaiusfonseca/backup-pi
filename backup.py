@@ -20,6 +20,8 @@ def path_exists(path):
     return os.path.exists(path)
 
 # verifies if it's a file
+def is_file(path):
+    return os.path.isfile(path)
 
 # verifies if the extension is .txt
 
