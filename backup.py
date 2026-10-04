@@ -15,4 +15,11 @@ def has_argument(argument):
 
     return False
 
+# verifies if the path exists
+def path_exists(path):
+    return os.path.exists(path)
+
+# verifies if it's a file
+
+# verifies if the extension is .txt
 
