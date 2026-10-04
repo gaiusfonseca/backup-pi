@@ -1,0 +1,35 @@
+import backup, os
+
+def test_should_return_false_when_no_argument():
+    # Arrange
+    path = ["./backup.py"]
+    expected = False
+
+    # Act
+    actual = backup.has_argument(path)
+
+    # Assert
+    assert actual == expected, "expected False when there are no arguments."
+
+def test_should_return_true_when_argument_was_passed():
+    # Arrange
+    path = ["./backup.py", os.path.join(".", "folders_to_backup.txt")]
+    expected = True
+
+    # Act
+    actual = backup.has_argument(path)
+
+    # Assert
+    assert actual == expected, "expected True when there are two arguments."
+
+def test_should_return_false_when_many_argument():
+    # Arrange
+    path = ["./backup.py", os.path.join(".", "folders_to_backup.txt"), os.path.join(".", "another_file.txt")]
+    expected = False
+
+    # Act
+    actual = backup.has_argument(path)
+
+    # Assert
+    assert actual == expected, "expected False when there are no arguments."
+
