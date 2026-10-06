@@ -1,4 +1,5 @@
-__pycache__
+*__pycache__
 .pytest_cache
 .venv
+folders_to_backup.txt
 backup.zip
